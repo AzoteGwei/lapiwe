@@ -1,0 +1,89 @@
+lapiwe — NOTICE
+===============
+
+Copyright (c) 2026 azote
+
+This file records the specification attribution and third-party license notices
+for lapiwe. The project is dual-licensed under MIT OR Apache-2.0; see README.md,
+LICENSE-MIT, and LICENSE-APACHE for the full license texts.
+
+
+1. RFC 6330 code components (IETF Trust)
+----------------------------------------
+
+lapiwe implements the algorithms and container semantics defined in RFC 6330,
+"RaptorQ Forward Error Correction Scheme for Object Delivery". RFC 6330
+contains code components owned by the IETF Trust. Under the copyright and
+license notice in that document, code components extracted from it must include
+the "Simplified BSD License" text (IETF Trust Legal Provisions, Section 4.e; the
+IETF Trust clarified on 2021-09-21 that the "Simplified BSD License" referred to
+in that notice is the Revised BSD License, with unchanged license text).
+
+RFC 6330 copyright and license notice:
+
+    Copyright (c) 2011 IETF Trust and the persons identified as the
+    document authors. All rights reserved.
+
+    This document is subject to BCP 78 and the IETF Trust's Legal
+    Provisions Relating to IETF Documents
+    (http://trustee.ietf.org/license-info) in effect on the date of
+    publication of this document. Please review these documents carefully,
+    as they describe your rights and restrictions with respect to this
+    document. Code Components extracted from this document must include
+    Simplified BSD License text as described in Section 4.e of the Trust
+    Legal Provisions and are provided without warranty as described in the
+    Simplified BSD License.
+
+BSD License text (IETF Trust Legal Provisions, Section 4.c, 3-clause):
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are met:
+
+    - Redistributions of source code must retain the above copyright notice,
+      this list of conditions and the following disclaimer.
+
+    - Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+
+    - Neither the name of Internet Society, IETF or IETF Trust, nor the names
+      of specific contributors, may be used to endorse or promote products
+      derived from this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+    IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+    THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+    PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+    CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+    EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+    PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+    PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+    LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+    NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+2. `raptorq` (RaptorQ codec crate)
+----------------------------------
+
+The RaptorQ encoding and decoding in lapiwe is provided by the third-party
+`raptorq` crate (v2.0.1):
+
+    raptorq
+    Copyright Christopher Berner
+    https://github.com/cberner/raptorq
+    Licensed under the Apache License, Version 2.0.
+
+
+3. Runtime dependencies (direct)
+--------------------------------
+
+    crate          version   license (SPDX)
+    raptorq       2.0.1     Apache-2.0
+    blake3        1.8.7     CC0-1.0 OR Apache-2.0 OR Apache-2.0 WITH LLVM-exception
+    crc32c        0.6.8     Apache-2.0 OR MIT
+    signal-hook   0.3.18    Apache-2.0 OR MIT
+
+The complete dependency tree and exact versions are recorded in `Cargo.lock`.
+Licenses and copyright notices for transitive dependencies are available from
+their crate metadata (for example, via `cargo metadata`).
